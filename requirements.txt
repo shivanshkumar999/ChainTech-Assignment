@@ -3,3 +3,4 @@ mysql-connector-python==8.2.0
 Flask_MySQLdb==2.0.0
 Requests==2.32.3
 SQLAlchemy==2.0.31
+pytz==2024.1
