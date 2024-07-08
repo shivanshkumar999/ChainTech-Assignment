@@ -53,7 +53,7 @@
           <div class="result">
             {% if res %}
             <h3>{{ res["address"] }}</h3>
-            <p>It's <span>{{date[0]}}</span> at <span>{{ res["timezone"] }}</span> timezone</p>
+            <p>It's <span>{{date[0]}}</span> at <span>{{ date[2] }}</span> timezone</p>
             <p>Today is <span>{{date[1]}}</span></p>
             <p>Temperature is <span>{{ res["temp"] }}</span> deg K</p>
             <p>Weather shows {{ res["desc"] }}</p>
