@@ -1,8 +1,9 @@
-import requests,datetime,random
+import requests,datetime,random, pytz 
 
 # Function to return date and time
 def get_date():
-    date=datetime.datetime.now().strftime("%H:%M - %d / %m / %Y").split("-")
+    datetime_ist = datetime.datetime.now(pytz.timezone('Asia/Kolkata') ) 
+    date=datetime_ist.strftime('"%H:%M - %d / %m / %Y - %Z"').replace('"',"").split("-")
     return date
 
 # Function to retrieve weather data from an open source api
