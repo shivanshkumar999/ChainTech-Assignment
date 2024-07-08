@@ -22,7 +22,7 @@
     $('#saveascsv').click(function(){
         $.ajax({
             url: "/download_data",
-            dataType : "json",
+            dataType : "application/json",
             method: 'POST',
             success: function(jsonData){
                 const data = JSON.parse(jsonData);
