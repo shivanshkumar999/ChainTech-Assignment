@@ -53,7 +53,7 @@
           <div class="result">
             {% if res %}
             <h3>{{ res["address"] }}</h3>
-            <p>It's <span>{{date[0]}}</span> at <span>{{ date[2] }}</span> timezone</p>
+            <p>It's <span>{{date[0]}}</span> {{ date[2] }}</p>
             <p>Today is <span>{{date[1]}}</span></p>
             <p>Temperature is <span>{{ res["temp"] }}</span> deg K</p>
             <p>Weather shows {{ res["desc"] }}</p>
@@ -74,6 +74,7 @@
                   type="name"
                   name="name"
                   class="form-control"
+                  required
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                 />
@@ -85,6 +86,7 @@
               <input
                 type="email"
                 name="email"
+                required
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
@@ -97,6 +99,7 @@
               <input
                 type="password"
                 name="password"
+                required
                 class="form-control"
                 id="exampleInputPassword1"
               />
