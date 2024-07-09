@@ -31,10 +31,13 @@ def store_data(name, email, password):
 # Fetch all the data from the database
 def get_all_data():
     entries = session.query(FormResponses).all()
-    if entries:
-        session.commit()
-        return entries
-    else:
+    try:
+        if entries:
+            session.commit()
+            return entries
+        else:
+            return "Error in extracting data from database"
+    except:
         session.rollback()
         return "Error in extracting data from database"
 
